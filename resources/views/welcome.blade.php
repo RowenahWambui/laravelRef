@@ -62,32 +62,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-            #imgbkn{
-                background-image: url('../children.jpeg');
-                /* to view the image in 100% height...cover the landing page heightwise...use the whole window*/
-                height: 100vh; 
-                /* to see the whole image */
-                background-size: cover;
-                /* center the image */
-                background-position: center;
-                /* makes it a flex container... it will align all items i.e. the
-                h1s, paragraphs horizontally as flex items*/
-                display: flex;
-                /* change the flex to a column... i.e the text(header, paragraph, link will go below each other */
-                flex-direction: column;
-                /* move text to the middle of the page */
-                justify-content: center;
-                /* move content to the middle */
-                align-items: center;
-                /* move text to the middle when resizing the page */
-                text-align: center;
-                /* when screen is resized the spacing will not be affected */
-                padding: 0 20px;
-            }
 
-            #imgbakgn h1{
-                font-size: 50px;
-            }
         </style>
     </head>
     <body>
@@ -102,25 +77,6 @@
                     @endif
                 </div>
             @endif
-
-            <!-- <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div> -->
-            <header id="imgbkn">
-                <div class="content">
-                    <h1>Charity sees the need not the cause</h1>
-                </div>
-            </header>
         </div>
     </body>
 </html>

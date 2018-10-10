@@ -1,14 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.master')
 @section('content')
-    <div class="row">
-    <div class="col-sm-12">
+    <div class="box">
+    <div class="box-header">
         <div class="full-right">
-            <h2>CRUD TEST</h2>
+            <h2>Refugees Table</h2>
         </div>
     </div>
-    </div>
-
-    <table class="table table-bordered">
+    <div class="box-body">
+    <table class="table table-bordered table-responsive">
         <tr>
             <th>No</th>
             <th>First Name</th>
@@ -48,5 +47,6 @@
         @endforeach
 
     </table>
-
+    </div>
+    </div>
 @endsection 
