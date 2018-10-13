@@ -74,12 +74,15 @@
                     <span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title">Edit Job Details</h4>
                 </div>
-                <form action="{{route('jobs.update', $value->id)}}" method="POST">
-                   {{-- {{method_field('patch')}} --}}
-                    <!--this csrf helps to remove laravel errors incase you click save
+                <form method="POST" action="{{route('jobs.update', $value->id)}}" >
+                        <input type="hidden" name="_method" value="patch">
+
+                        <!--this csrf helps to remove laravel errors incase you click save
                      without any data or if there are no methods to save the data in the db
                      -->
                     {{csrf_field()}}
+                 {{-- this patch method isnt working. It throws an error(MethodNotAllowedHttpException ) --}}
+                  {!! method_field('patch') !!}
                     <div class="modal-body">
                         <input class="hidden" name="job_id" id="id" value="{{$value->id}} ">
                         @include('jobs.form')

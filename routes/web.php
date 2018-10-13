@@ -16,14 +16,18 @@ Route::get('/', function () {
 Route::get('/refugees', function () {
     return view('refugees/index');
 });
-// Route::get('/jobs', function () {
-//     return view('jobs/index');
-// });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 Route::resource('refugees','RefugeesController');
 
 Route::resource('jobs','JobsController');
+
+Route::resource('messages','MessagesController');
+
+
+Route::resource('camp','CampsController');
+
+
+// Route:: patch('/jobs/{job}', 'JobsController@update');

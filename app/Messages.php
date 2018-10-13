@@ -1,0 +1,11 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Messages extends Model
+{
+    protected $fillable = ['name','email','subject','message'];
+    protected $dates = ['recorded_on','updated_on'];
+}

@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#feature">Who We are</a></li>
-          <li><a href="#courses">What we do</a></li>
+          <li><a href="#camps">What we do</a></li>
           <li><a href="#organisations">Partners</a></li>
           <li><a href="#contact">Contact Us</a></li>
           @if (Route::has('login'))
@@ -47,9 +47,6 @@
     </div>
   </nav>
   <!--/ Navigation bar-->
-  <!--Modal box-->
-  
-  <!--/ Modal box-->
   <!--Banner-->
   <div class="banner">
     <div class="bg-color">
@@ -60,9 +57,9 @@
               <h2 class="text-dec">Trust & Quality</h2>
             </div>
             <div class="intro-para text-center quote">
-              <p class="big-text">Learning Today . . . Leading Tomorrow.</p>
+              <p class="big-text">Helping Today . . . Leading Tomorrow.</p>
               <p class="small-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium enim repellat sapiente quos architecto<br>Laudantium enim repellat sapiente quos architecto</p>
-              <a href="#footer" class="btn get-quote">GET A QUOTE</a>
+              <a href="#footer" class="btn get-quote">DO LIFE BIG</a>
             </div>
             <a href="#feature" class="mouse-hover">
               <div class="mouse"></div>
@@ -78,16 +75,19 @@
     <div class="container">
       <div class="row">
         <div class="header-section text-center">
-          <h2>Features</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
+          <h2>Who We Are</h2>
+          <p>Ref Kenya is a Refugee Organisation that is dedicated to help refugees from other countries start a new life here in Kenya as well as offer them opportunities to apply for greencards</p>
           <hr class="bottom-line">
         </div>
         <div class="feature-info">
           <div class="fea">
             <div class="col-md-4">
               <div class="heading pull-right">
-                <h4>Latest Technologies</h4>
-                <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                <h4>Testimonials </h4>
+                <p>When I left my country two years ago, My husband and I decided it would be better if we each left separately and I would leave first with the children, along the border I lost my son
+                   but upon registration at the camp, the officer asked me if there were any missing family member.</p>
+                   <p> I gave out my son's details, three weeks later, the officer sent for me
+                   and told me to come pick my son <br/><small class="text-name center">Mrs Mahajid</small> </p>
               </div>
               <div class="fea-img pull-left">
                 <i class="fa fa-css3"></i>
@@ -97,7 +97,7 @@
           <div class="fea">
             <div class="col-md-4">
               <div class="heading pull-right">
-                <h4>Toons Background</h4>
+                <h4>Case studies</h4>
                 <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
               </div>
               <div class="fea-img pull-left">
@@ -108,8 +108,10 @@
           <div class="fea">
             <div class="col-md-4">
               <div class="heading pull-right">
-                <h4>Award Winning Design</h4>
-                <p>Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
+                <h4>Community Contributing</h4>
+                <p>We not only help the refugees but the community around them as well. Build the whole community so that they can fully accept the refugees as part of their own</p>
+                <p>Love and share with the community around them as well. Becomme a whole new family together that lives peacefully and harmoniously</p>
+
               </div>
               <div class="fea-img pull-left">
                 <i class="fa fa-trophy"></i>
@@ -120,13 +122,14 @@
       </div>
     </div>
   </section>
+  <hr/>
   <!--/ feature-->
-   <!--Courses-->
-   <section id="courses" class="section-padding">
+   <!--Camps-->
+   <section id="camps" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="header-section text-center">
-          <h2>Courses</h2>
+          <h2>Camps</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
           <hr class="bottom-line">
         </div>
@@ -136,9 +139,9 @@
       <div class="row">
         <div class="col-md-4 col-sm-6 padleft-right">
           <figure class="imghvr-fold-up">
-            <img src="img/course01.jpg" class="img-responsive">
+            <img src="img/camp.jpg" class="img-responsive">
             <figcaption>
-              <h3>Course Name</h3>
+              <h3>Dadaab Camp</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
             </figcaption>
             <a href="#"></a>
@@ -146,9 +149,9 @@
         </div>
         <div class="col-md-4 col-sm-6 padleft-right">
           <figure class="imghvr-fold-up">
-            <img src="img/course02.jpg" class="img-responsive">
+            <img src="img/refugee.jpg" class="img-responsive">
             <figcaption>
-              <h3>Course Name</h3>
+              <h3>Kakuma Camp</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
             </figcaption>
             <a href="#"></a>
@@ -156,39 +159,9 @@
         </div>
         <div class="col-md-4 col-sm-6 padleft-right">
           <figure class="imghvr-fold-up">
-            <img src="img/course03.jpg" class="img-responsive">
+            <img src="img/african.jpg" class="img-responsive">
             <figcaption>
-              <h3>Course Name</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
-        <div class="col-md-4 col-sm-6 padleft-right">
-          <figure class="imghvr-fold-up">
-            <img src="img/course04.jpg" class="img-responsive">
-            <figcaption>
-              <h3>Course Name</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
-        <div class="col-md-4 col-sm-6 padleft-right">
-          <figure class="imghvr-fold-up">
-            <img src="img/course05.jpg" class="img-responsive">
-            <figcaption>
-              <h3>Course Name</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
-            </figcaption>
-            <a href="#"></a>
-          </figure>
-        </div>
-        <div class="col-md-4 col-sm-6 padleft-right">
-          <figure class="imghvr-fold-up">
-            <img src="img/course06.jpg" class="img-responsive">
-            <figcaption>
-              <h3>Course Name</h3>
+              <h3>Kalobeyei Camp</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam atque, nostrum veniam consequatur libero fugiat, similique quis.</p>
             </figcaption>
             <a href="#"></a>
@@ -202,42 +175,39 @@
   <section id="organisations" class="section-padding">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <div class="orga-stru">
-              <h3>65%</h3>
-              <p>Say NO!!</p>
-              <i class="fa fa-male"></i>
+          <div class="col-md-10">
+            <div class="header-section text-center">
+              <h2>Partners</h2>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <div class="orga-stru">
-              <h3>20%</h3>
-              <p>Says Yes!!</p>
-              <i class="fa fa-male"></i>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <div class="orga-stru">
+                <h3>UNHCR</h3>
+                <i class="fa fa-male"></i>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <div class="orga-stru">
-              <h3>15%</h3>
-              <p>Can't Say!!</p>
-              <i class="fa fa-male"></i>
+            {{-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="orga-stru">
+                  <h3>Locals</h3>
+                  <i class="fa fa-male"></i>
+                </div>
+              </div> --}}
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+              <div class="orga-stru">
+                <h3>RCK</h3>
+                <i class="fa fa-male"></i>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-info">
-            <hgroup>
-              <h3 class="det-txt"> Is inclusive quality education affordable?</h3>
-              <h4 class="sm-txt">(Revised and Updated for 2016)</h4>
-            </hgroup>
-            <p class="det-p">Donec et lectus bibendum dolor dictum auctor in ac erat. Vestibulum egestas sollicitudin metus non urna in eros tincidunt convallis id id nisi in interdum.</p>
-          </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <div class="orga-stru">
+                <h3>FOREIGN AFFAIRS KE</h3>
+                <i class="fa fa-male"></i>
+              </div>
+            </div>
         </div>
       </div>
     </div>
   </section>
-  <!--/ Organisations-->
+  <!--/ Partners-->
   <!--Contact-->
   <section id="contact" class="section-padding">
     <div class="container">
@@ -249,7 +219,8 @@
         </div>
         <div id="sendmessage">Your message has been sent. Thank you!</div>
         <div id="errormessage"></div>
-        <form action="" method="post" role="form" class="contactForm">
+        <form action="{{route('messages.store')}}" method="post" role="form" class="contactForm" method="POST">
+            {{csrf_field()}}
           <div class="col-md-6 col-sm-6 col-xs-12 left">
             <div class="form-group">
               <input type="text" name="name" class="form-control form" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -281,74 +252,14 @@
       </div>
     </div>
   </section>
+  <hr>
   <!--/ Contact-->
-  <!--Cta-->
-  <section id="cta-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 class="text-center">Subscribe Now</h2>
-          <p class="cta-2-txt">Sign up for our free weekly software design courses, we’ll send them right to your inbox.</p>
-          <div class="cta-2-form text-center">
-            <form action="#" method="post" id="workshop-newsletter-form">
-              <input name="" placeholder="Enter Your Email Address" type="email">
-              <input class="cta-2-form-submit-btn" value="Subscribe" type="submit">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ Cta-->
-  <!--work-shop-->
-  <section id="work-shop" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="header-section text-center">
-          <h2>Upcoming Workshop</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-          <hr class="bottom-line">
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="service-box text-center">
-            <div class="icon-box">
-              <i class="fa fa-html5 color-green"></i>
-            </div>
-            <div class="icon-text">
-              <h4 class="ser-text">Mentor HTML5 Workshop</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="service-box text-center">
-            <div class="icon-box">
-              <i class="fa fa-css3 color-green"></i>
-            </div>
-            <div class="icon-text">
-              <h4 class="ser-text">Mentor CSS3 Workshop</h4>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="service-box text-center">
-            <div class="icon-box">
-              <i class="fa fa-joomla color-green"></i>
-            </div>
-            <div class="icon-text">
-              <h4 class="ser-text">Mentor Joomla Workshop</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ work-shop-->
-  <!--Faculity member-->
+  <!--Team Behind Everything-->
   <section id="faculity-member" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="header-section text-center">
-          <h2>Meet Our Faculty Member</h2>
+          <h2>Meet Our Awesome Team</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
           <hr class="bottom-line">
         </div>
@@ -356,11 +267,11 @@
           <div class="pm-staff-profile-container">
             <div class="pm-staff-profile-image-wrapper text-center">
               <div class="pm-staff-profile-image">
-                <img src="img/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+                <img src="img/him.jpg" alt="" class="img-thumbnail img-circle" />
               </div>
             </div>
             <div class="pm-staff-profile-details text-center">
-              <p class="pm-staff-profile-name">Bryan Johnson</p>
+              <p class="pm-staff-profile-name">Kimora Johnson</p>
               <p class="pm-staff-profile-title">Lead Software Engineer</p>
 
               <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
@@ -371,11 +282,11 @@
           <div class="pm-staff-profile-container">
             <div class="pm-staff-profile-image-wrapper text-center">
               <div class="pm-staff-profile-image">
-                <img src="img/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+                <img src="img/him.jpg" alt="" class="img-thumbnail img-circle" />
               </div>
             </div>
             <div class="pm-staff-profile-details text-center">
-              <p class="pm-staff-profile-name">Bryan Johnson</p>
+              <p class="pm-staff-profile-name">Gabriela Marshal</p>
               <p class="pm-staff-profile-title">Lead Software Engineer</p>
 
               <p class="pm-staff-profile-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et placerat dui. In posuere metus et elit placerat tristique. Maecenas eu est in sem ullamcorper tincidunt. </p>
@@ -386,7 +297,7 @@
           <div class="pm-staff-profile-container">
             <div class="pm-staff-profile-image-wrapper text-center">
               <div class="pm-staff-profile-image">
-                <img src="img/mentor.jpg" alt="" class="img-thumbnail img-circle" />
+                <img src="img/him.jpg" alt="" class="img-thumbnail img-circle" />
               </div>
             </div>
             <div class="pm-staff-profile-details text-center">
@@ -400,32 +311,7 @@
       </div>
     </div>
   </section>
-  <!--/ Faculity member-->
-  <!--Testimonial-->
-  <section id="testimonial" class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="header-section text-center">
-          <h2 class="white">See What Our Customer Are Saying?</h2>
-          <p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nesciunt vitae,<br> maiores, magni dolorum aliquam.</p>
-          <hr class="bottom-line bg-white">
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="text-comment">
-            <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-            <p class="text-name">Abraham Doe - Creative Dırector</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <div class="text-comment">
-            <p class="text-par">"Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, nec sagittis sem"</p>
-            <p class="text-name">Abraham Doe - Creative Dırector</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--/ Testimonial-->
+  <!--/ Team Behind Everything-->
  
  
   <!--Footer-->

@@ -111,7 +111,7 @@ Navigation bar
 Banner
 ************************************/
 .banner{
-	background: url('../img/bg-banner.jpg') no-repeat center top;
+	background: url('../img/unhcr.jpg') no-repeat center top;
     background-size: cover;
 	min-height: 580px;
     position: relative;
@@ -281,11 +281,11 @@ h2{
 .orga-stru
 {
     background-color: #5FCF80;
-    width: 109px;
+    width: 200PX;
     height: auto;
     padding: 10px 10px 25px 10px;
     text-align: center;
-    border-radius: 0px 80px 99px 99px;
+    border-radius: 50%;
     -moz-border-radius: 0px 80px 99px 99px;
     -webkit-border-radius: 0px 80px 99px 99px;
     -o-border-radius: 0px 80px 99px 99px;

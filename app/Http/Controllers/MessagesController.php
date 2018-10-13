@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use \App\Job;
+use \App\Messages;
 
-class JobsController extends Controller
+class MessagesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class JobsController extends Controller
      */
     public function index()
     {
-        $jobs = Job::all();
-        return view('jobs.index', compact('jobs'));
+        $message = Messages::all();
+        return view('messages.index',compact('messages')); 
     }
 
     /**
@@ -24,11 +24,10 @@ class JobsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
-    // {
-    //     //
-        
-    // }
+    public function create()
+    {
+        //
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,16 +36,10 @@ class JobsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {    
-        $this->validate($request,['title'=>'required|string|max:255',
-        'description'=>'required',
-        'qualifications'=>'required',
-        ]);
-
-
-         Job::create($request->all());
-         return redirect()->route('jobs.index')->with('success','Job Details successfully added');
-        }
+    {
+        Messages::create($request->all());
+        return view('index');
+    }
 
     /**
      * Display the specified resource.
@@ -79,13 +72,7 @@ class JobsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-     //Job::find($id)->update($request->all());
-
-        $job = Job::findOrFail($request->job_id);
-
-         $job->update($request->all());
-        return back(); 
+        //
     }
 
     /**
@@ -96,10 +83,6 @@ class JobsController extends Controller
      */
     public function destroy($id)
     {
-        Job::find($id)->delete();
-        //successful deletion message not working....still dont know why ;(
-        return redirect()->route('jobs.index')->with('success','Details have been deleted');
-
-
+        //
     }
 }
