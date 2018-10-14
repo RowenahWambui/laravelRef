@@ -32,6 +32,7 @@
             </div>
         </div>
     </div>
-    <div class="form-group">
+    {{-- <div class="form-group">
         {!! Form::button(isset($model)? 'update' : 'save', ['class'=> 'btn btn-success', 'type' =>'submit']) !!}
+    </div> --}}
     </div>

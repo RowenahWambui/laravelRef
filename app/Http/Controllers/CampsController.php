@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Camps;
 
 class CampsController extends Controller
 {
@@ -13,7 +14,9 @@ class CampsController extends Controller
      */
     public function index()
     {
-        //
+        $camp = Camps::all();
+        return view('camp.index', compact('camp'));
+
     }
 
     /**
@@ -34,7 +37,13 @@ class CampsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+        'Camp_Name'=>'required',
+        'Camp_Location'=>'required',
+        'Camp_Capacity'=>'required',
+        ]);
+        Camps::create($request->all());
+        return redirect()->route('camp.index')->with('success','Camp Details successfully added');
     }
 
     /**
@@ -56,7 +65,8 @@ class CampsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $camp = Camps::find($id);
+        return view('camp.index',compact('camp'));
     }
 
     /**
@@ -68,7 +78,13 @@ class CampsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'Camp_Name'=>'required',
+            'Camp_Location'=>'required',
+            'Camp_Capacity'=>'required',
+            ]);
+            Camps::find($id)->update($request->all());
+            return redirect()->route('camp.index')->with('success','Camp Details successfully added');
     }
 
     /**
@@ -79,6 +95,7 @@ class CampsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Camps::find($id)->delete();
+        return redirect()->route('camp.index')->with('success','Details have been deleted');
     }
 }

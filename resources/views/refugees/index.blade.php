@@ -10,9 +10,7 @@
     <table class="table table-bordered table-responsive">
         <tr>
             <th>No</th>
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
+            <th>Full Name</th>
             <th>Country</th>
             <th>Age</th>
             <th>Gender</th>
@@ -27,9 +25,7 @@
         @foreach($refugee as $key => $value)
             <tr>
                 <td>{{$no++}}</td>
-                <td>{{$value->First_Name}}</td>
-                <td>{{$value->Middle_Name}}</td>
-                <td>{{$value->Last_Name}}</td>
+                <td>{{$value->Full_Name}}</td>
                 <td>{{$value->Country}}</td>
                 <td>{{$value->Age}}</td>
                 <td>{{$value->Gender}}</td>

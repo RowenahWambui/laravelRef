@@ -38,9 +38,7 @@ class RefugeesController extends Controller
     public function store(Request $request)
     {
         //
-        $this->validate($request,['First_Name'=>'required|string|max:255',
-        'Middle_Name'=>'required',
-        'Last_Name'=>'required',
+        $this->validate($request,['Full_Name'=>'required|string|max:255',
         'Country'=>'required',
         'Age'=>'required',
         'Gender'=>'required',
@@ -85,9 +83,7 @@ class RefugeesController extends Controller
     {
         //
         $this->validate($request,[
-        'First_Name'=>'required',
-        'Middle_Name'=>'required',
-        'Last_Name'=>'required',
+        'Full_Name'=>'required',
         'Country'=>'required',
         'Age'=>'required',
         'Gender'=>'required',

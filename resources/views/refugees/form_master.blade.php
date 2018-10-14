@@ -1,38 +1,14 @@
 <div class="row">
     <div class="col-sm-2">
-        {!! form::label('First_Name','First Name')!!}
+        {!! form::label('Full_Name','Full Name')!!}
     </div>
     <div class="col-sm-10">
-        <div class="form-group{{ $errors->has('First_Name')? 'has-error': "" }}">
-            {{ Form::text('First_Name',NULL,['class'=>'form-control','id'=>'First_Name','placeholder'=>'First Name ']) }}
-            {{ $errors->first('First_Name','<p class="help-block">:message</p>') }}
+        <div class="form-group{{ $errors->has('Full_Name')? 'has-error': "" }}">
+            {{ Form::text('Full_Name',NULL,['class'=>'form-control','id'=>'Full_Name','placeholder'=>'Full Name ']) }}
+            {{ $errors->first('Full_Name','<p class="help-block">:message</p>') }}
         </div>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-sm-2">
-    {!! form::label('Middle_Name','Middle Name')!!}
-    </div>
-    <div class="col-sm-10">
-        <div class="form-group{{ $errors->has('Middle_Name') ? 'has-error' : "" }} ">
-            {{ Form::text('Middle_Name',NULL,['class'=>'form-control','id'=>'Middle_Name','placeholder'=>'Middle Name ']) }}
-            {{ $errors->first('Middle_Name','<p class="help-block">:message</p>') }}
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-sm-2">
-    {!! form::label('Last_Name','Last Name')!!}
-    </div>
-    <div class="col-sm-10">
-        <div class="form-group{{ $errors->has('Last_Name') ? 'has-error' : ""  }} ">
-            {{ Form::text('Last_Name',NULL,['class'=>'form-control','id'=>'Last_Name','placeholder'=>'Last Name ']) }}
-            {{ $errors->first('Last_Name','<p class="help-block">:message</p>') }}
-        </div>
-    </div>
-</div>
-
 <div class="row">
     <div class="col-sm-2">
     {!! form::label('Country','Country')!!}

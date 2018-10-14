@@ -127,10 +127,9 @@
                       <ul class="treeview-menu">
                       <li><a href="{{url('refugees')}}">Refugees</a></li>
                       <li><a href="{{url('jobs')}}">Jobs</a></li>
-                      <li><a href="{{url('')}}">Camps</a></li>
+                      <li><a href="{{url('camp')}}">Camps</a></li>
                       <li><a href="{{url('')}}">Case</a></li>
                       <li><a href="{{url('')}}">Repatriation</a></li>
-                      <li><a href="{{url('')}}">Meal</a></li>
                       <li><a href="{{url('')}}">Education</a></li>
 
                       </ul>
@@ -143,7 +142,7 @@
                         </a>
                         <ul class="treeview-menu">
                           <li><a href="#">Job Placements</a></li>
-                          <li><a href="#">Health Insurance</a></li>
+                          <li><a href="#">Allocations</a></li>
                         </ul>
                       </li>
                       <li class="treeview">
@@ -174,7 +173,7 @@
                 <!-- /.sidebar -->
               </aside>
             
-              <!-- Content Wrapper. Contains page content -->
+              <!-- Content Wrapper. Contains page con tent -->
               <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">

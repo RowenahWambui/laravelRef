@@ -82,7 +82,7 @@
                      -->
                     {{csrf_field()}}
                  {{-- this patch method isnt working. It throws an error(MethodNotAllowedHttpException ) --}}
-                  {!! method_field('patch') !!}
+                  {{-- {!! method_field('patch') !!} --}}
                     <div class="modal-body">
                         <input class="hidden" name="job_id" id="id" value="{{$value->id}} ">
                         @include('jobs.form')
