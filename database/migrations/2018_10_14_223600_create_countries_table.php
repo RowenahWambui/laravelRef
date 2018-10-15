@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRepatriationsTable extends Migration
+class CreateCountriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateRepatriationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('repatriations', function (Blueprint $table) {
+        Schema::create('countries', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('ref_id');
-            $table->string('country');
-            $table->string('num_of_lost_members');
-            $table->string('lost-member');
+            $table->string('Country_Name');
+            $table->string('Embassy');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateRepatriationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('repatriations');
+        Schema::dropIfExists('countries');
     }
 }

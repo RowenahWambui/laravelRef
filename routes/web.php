@@ -20,14 +20,18 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('refugees','RefugeesController');
+Route::resource('camp','CampsController');
+
+Route::resource('country','CountryController');
 
 Route::resource('jobs','JobsController');
 
 Route::resource('messages','MessagesController');
 
+Route::resource('refugees','RefugeesController');
 
-Route::resource('camp','CampsController');
+Route::resource('repatriation','RepatriationsController');
+
 
 
 // Route:: patch('/jobs/{job}', 'JobsController@update');

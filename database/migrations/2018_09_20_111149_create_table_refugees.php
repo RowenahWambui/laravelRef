@@ -17,8 +17,6 @@ class CreateTableRefugees extends Migration
         schema::create('Refugees', function(Blueprint $table){
             $table->increments('id');
             $table->string('Full_Name');
-            $table->string('Middle_Name');
-            $table->string('Last_Name');
             $table->string('Country');
             $table->string('Age');
             $table->string('Gender');

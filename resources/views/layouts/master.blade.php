@@ -128,9 +128,9 @@
                       <li><a href="{{url('refugees')}}">Refugees</a></li>
                       <li><a href="{{url('jobs')}}">Jobs</a></li>
                       <li><a href="{{url('camp')}}">Camps</a></li>
-                      <li><a href="{{url('')}}">Case</a></li>
-                      <li><a href="{{url('')}}">Repatriation</a></li>
-                      <li><a href="{{url('')}}">Education</a></li>
+                      <li><a href="{{url('country')}}">Country</a></li>
+                      <li><a href="{{url('repatriation')}}">Repatriation</a></li>
+                      {{-- <li><a href="{{url('')}}">Education</a></li> --}}
 
                       </ul>
                     </li>
