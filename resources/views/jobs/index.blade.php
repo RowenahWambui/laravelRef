@@ -5,7 +5,15 @@
     <div class="box">
         <div class="box-header">
             <h3>Job Postings</h3>
-            <button type="button" class="btn btn-primary pull pull-right" data-toggle="modal" data-target="#modal-default"> Add Job</button>
+            <div class="pull-right">
+                <div class="input-group">
+                    <input type="text" class="form-control pull pull-right" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button type="submit" name="button" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </div>
+                </div><br>
+                <button type="button" class="btn btn-primary pull pull-right" data-toggle="modal" data-target="#modal-default"> Add Job</button>
+            </div>
 
         </div>
         <div class="box-body">
@@ -14,8 +22,12 @@
                     <tr>
                 {{-- <th>No</th> --}}
                         <th>Job Title</th>
+                        {{-- {{request()->session()->get('field' =='title' ?(request()->session()->get('sort')== 'asc'?'&#9652;':'&#9652'):'')}} --}}
                         <th>Job Description</th>
+                        {{-- {{request()->session()->get('field' =='description' ?(request()->session()->get('sort')== 'asc'?'&#9652;':'&#9652'):'')}} --}}
                         <th>Job Qualifications</th>
+                        {{-- {{request()->session()->get('field' =='qualifications' ?(request()->session()->get('sort')== 'asc'?'&#9652;':'&#9652'):'')}} --}}
+
                         <th>Modify</th>
                     </tr>
                 </thead>

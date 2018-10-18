@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Refugees;
+use \App\Refugees;
+use \App\Job;
+use DB;
+
 class RefugeesController extends Controller
 {
     /**
@@ -88,6 +91,7 @@ class RefugeesController extends Controller
         'Age'=>'required',
         'Gender'=>'required',
         'EducationLevel'=>'required',
+        'Skill' => 'required',
         ]);
 
         Refugees::find($id)->update($request->all());
@@ -105,5 +109,13 @@ class RefugeesController extends Controller
         //
         Refugees::find($id)->delete();
         return redirect()->route('refugees.index')->with('success','Details have been deleted');
+    }
+    public function allocation(){
+        $refugees = DB::table('refugees')
+            ->join('skills', 'refugees.skill_id', '=', 'skills.id')
+            ->join('jobs', 'jobs.skill_id', '=', 'skills.id')
+            ->select('refugees.Full_Name', 'skills.Skill', 'jobs.description')
+            ->get();
+            return view('allocation.index',['refugees'=>$refugees]);
     }
 }

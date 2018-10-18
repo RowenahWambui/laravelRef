@@ -3,9 +3,9 @@
         {!! form::label('Refugee_Name','Refugee Name')!!}
         </div>
         <div class="col-sm-10">
-            <div class="form-group{{ $errors->has('Full_Name')? 'has-error': "" }}">
-                {{ Form::text('Full_Name',NULL,['class'=>'form-control','id'=>'Full_Name','placeholder'=>'Full Name ']) }}
-                {{ $errors->first('Full_Name','<p class="help-block">:message</p>') }}
+            <div class="form-group{{ $errors->has('ref_id')? 'has-error': "" }}">
+                {{ Form::text('ref_id',NULL,['class'=>'form-control','id'=>'ref_id','placeholder'=>'Full Name ']) }}
+                {{ $errors->first('ref_id','<p class="help-block">:message</p>') }}
             </div>
         </div>
     </div>

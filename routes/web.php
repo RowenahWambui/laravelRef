@@ -26,12 +26,23 @@ Route::resource('country','CountryController');
 
 Route::resource('jobs','JobsController');
 
+Route::resource('joballocation','JobsAllocationController');
+
+
 Route::resource('messages','MessagesController');
 
 Route::resource('refugees','RefugeesController');
+Route::get('/allocation','RefugeesController@allocation');
+
 
 Route::resource('repatriation','RepatriationsController');
 
+Route::resource('skills','SkillsController');
+
+
+// Route::group(['prefix'=>'jobs'], function () {
+//     Route::get('/','JobsController');
+// });
 
 
 // Route:: patch('/jobs/{job}', 'JobsController@update');

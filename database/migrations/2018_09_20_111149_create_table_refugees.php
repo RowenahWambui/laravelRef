@@ -21,6 +21,8 @@ class CreateTableRefugees extends Migration
             $table->string('Age');
             $table->string('Gender');
             $table->string('EducationLevel');
+            $table->unsignedInteger('skill_id');
+            $table->foreign('skill_id')->references('id')->on('skills');
             $table->timestamps();
         });
     }

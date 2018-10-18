@@ -13,9 +13,33 @@ class JobsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $jobs = Job::all();
+        // $request->session()->put('search', $request
+        //         ->has('search') ? $request->get('search' ) : ($request->session()
+        //         ->has('search')? $request->session()->get('search') : ''));
+
+        //         $request->session()->put('field', $request
+        //                 ->has('field') ? $request->get('field') : ($request->session()
+        //                 ->has('field') ? $request->session()->get('field'):'title'));
+                        
+        //         $request->session()->put('sort', $request
+        //         ->has('field') ? $request->get('sort') : ($request->session()
+        //         ->has('field') ? $request->session()->get('sort'):'asc'));
+       
+                        
+        // $jobs = new Job();
+        // $jobs = $jobs->where('title','like', '%' . $request->session()->get('search'). '%')
+        //              ->orderBy($request->get('field'), $request->session()->get('sort'))
+        //               ->paginate(5);
+        //  if($request->ajax()){
+        //     return view('jobs.index', compact('jobs'));
+        //  }else{
+        //     return view('jobs.ajax', compact('jobs'));
+        // }
+                
+       
+                        $jobs = Job::all();
         return view('jobs.index', compact('jobs'));
     }
 

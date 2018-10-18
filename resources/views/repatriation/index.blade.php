@@ -22,8 +22,8 @@
                      @foreach($repatriation as $key => $value)
                         <tr>
                             <td>{{$value->ref_id}}</td>
-                            <td>{{$value->lost_relative}}</td>
-                            <td>{{$value->Country}}</td>
+                            <td>{{$value->relative_name}}</td>
+                            <td>{{$value->country}}</td>
                             <td>
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-modal">Edit</button>
                                 <button class="btn btn-danger"data-toggle="modal" data-target="#modal-danger"  data-myid="{{$value->id}}">Delete</button>

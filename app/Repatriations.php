@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Repatriations extends Model
 {
-    protected $fillable = ['ref_id','lost_relative','Country'];
+    protected $fillable = ['ref_id','relative_name','Country'];
     protected $dates = ['recorded_on', 'updated_on'];
 
 

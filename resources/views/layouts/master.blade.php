@@ -18,7 +18,7 @@
               <header class="main-header">
             
                 <!-- Logo -->
-                <a href="index2.html" class="logo">
+              <a href="{{url('')}}" class="logo">
                   <!-- mini logo for sidebar mini 50x50 pixels -->
                   <span class="logo-mini"><b>REF</b>KE</span>
                   <!-- logo for regular state and mobile devices -->
@@ -130,7 +130,7 @@
                       <li><a href="{{url('camp')}}">Camps</a></li>
                       <li><a href="{{url('country')}}">Country</a></li>
                       <li><a href="{{url('repatriation')}}">Repatriation</a></li>
-                      {{-- <li><a href="{{url('')}}">Education</a></li> --}}
+                      <li><a href="{{url('skills')}}">Skills</a></li>
 
                       </ul>
                     </li>
@@ -141,7 +141,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                          <li><a href="#">Job Placements</a></li>
+                          <li><a href="{{url('allocation')}}">Job Placements</a></li>
                           <li><a href="#">Allocations</a></li>
                         </ul>
                       </li>

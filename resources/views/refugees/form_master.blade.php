@@ -54,6 +54,17 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-sm-2">
+        {!! form::label('skill_id','Skill Level')!!}
+        </div>
+    <div class="col-sm-10">
+        <div class="form-group{{ $errors->has('skill_id')? 'has-error': "" }}">
+            {{ Form::text('skill_id',NULL,['class'=>'form-control','id'=>'skill_id','placeholder'=>'Skill Level ']) }}
+            {{ $errors->first('skill_id','<p class="help-block">:message</p>') }}
+        </div>
+    </div>
+</div>
 <div class="form-group">
         {!! Form::button(isset($model)? 'update' : 'save', ['class'=> 'btn btn-success', 'type' =>'submit']) !!}
 </div>
