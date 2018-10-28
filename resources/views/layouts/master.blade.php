@@ -7,8 +7,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstap.min.css"/>
+    {!! Charts::assets()!!}
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}" />
+    {!! Charts::styles() !!}
+
     @yield('stylesheets')
 </head>
     <body class="hold-transition skin-blue sidebar-mini">
@@ -152,8 +156,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                          <li><a href="#">Education Level</a></li>
-                          <li><a href="#">Affected Countries</a></li>
+                        <li><a href="{{('charts')}}">Refugee Data</a></li>
+                        <li><a href="{{('groups')}}">Affected Countries</a></li>
                         </ul>
                       </li>
                       <li class="treeview">
@@ -263,6 +267,7 @@
               <div class="control-sidebar-bg"></div>
             </div>
             <!-- ./wrapper -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>         
     <script src="{{ asset('js/app.js') }}"></script>   
     <script>
         $('#edit-modal').on('show.bs.modal', function (event){
@@ -295,6 +300,11 @@
 
 
     })
+
+
+   
+
     </script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </body>
 </html>

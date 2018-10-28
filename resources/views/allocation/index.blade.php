@@ -4,7 +4,7 @@
 <div class="">
     <div class="box">
         <div class="box-header">
-            <h3>Job Postings</h3>
+            <h3>Job Allocations</h3>
             <div class="pull-right">
                 <div class="input-group">
                     <input type="text" class="form-control pull pull-right" placeholder="Search">

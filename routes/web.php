@@ -24,6 +24,11 @@ Route::resource('camp','CampsController');
 
 Route::resource('country','CountryController');
 
+Route::get('/charts','Groups@genderGroup');
+
+Route::get('/groups','countryGroup@countryGroup');
+
+
 Route::resource('jobs','JobsController');
 
 Route::resource('joballocation','JobsAllocationController');

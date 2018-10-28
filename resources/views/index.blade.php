@@ -219,8 +219,10 @@
         </div>
         <div id="sendmessage">Your message has been sent. Thank you!</div>
         <div id="errormessage"></div>
-        <form action="{{route('messages.store')}}" method="post" role="form" class="contactForm" method="POST">
-            {{csrf_field()}}
+
+          {!! Form::open(['route'=>'messages.store','method'=>'POST']) !!}
+        {{-- <form action="{{route('messages.store')}}" method="post" role="form" class="contactForm" method="POST"> --}}
+            {{-- {{csrf_field()}} --}}
           <div class="col-md-6 col-sm-6 col-xs-12 left">
             <div class="form-group">
               <input type="text" name="name" class="form-control form" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -247,7 +249,7 @@
             <!-- Button -->
             <button type="submit" id="submit" name="submit" class="form contact-form-button light-form-button oswald light">SEND EMAIL</button>
           </div>
-        </form>
+          {!! form::close() !!}
 
       </div>
     </div>

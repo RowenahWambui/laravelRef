@@ -6,6 +6,9 @@
             <h2>Refugees Table</h2>
         </div>
     </div>
+    <a href="" class="btn btn-primary pull pull-left"> Import</a>
+    <br>
+    <br>
     <div class="box-body">
     <table class="table table-bordered table-responsive">
         <tr>
