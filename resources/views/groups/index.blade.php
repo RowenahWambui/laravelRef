@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<div class="app">
+<div class="pie">
 
         <center>
             {!! $chart->html() !!}
@@ -8,7 +8,7 @@
     </div>
     <!-- End Of Main Application -->
     {!! Charts::scripts() !!}
-    {!! $chart->script() !!}
+    {!! $charts->script() !!}
 @endsection
 
         

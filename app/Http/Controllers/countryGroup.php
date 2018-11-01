@@ -22,6 +22,7 @@ class countryGroup extends Controller
                         // ->groupBy('skill_id', null, [1 => 'Teaching', 2 => 'Modelling']);
     
     
-            return view('charts.index', ['chart' => $chart]);
+            return view('group.index', ['chart' => $chart]);
         }
+
 }

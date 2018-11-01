@@ -14,32 +14,9 @@ class JobsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        // $request->session()->put('search', $request
-        //         ->has('search') ? $request->get('search' ) : ($request->session()
-        //         ->has('search')? $request->session()->get('search') : ''));
-
-        //         $request->session()->put('field', $request
-        //                 ->has('field') ? $request->get('field') : ($request->session()
-        //                 ->has('field') ? $request->session()->get('field'):'title'));
-                        
-        //         $request->session()->put('sort', $request
-        //         ->has('field') ? $request->get('sort') : ($request->session()
-        //         ->has('field') ? $request->session()->get('sort'):'asc'));
+    {             
        
-                        
-        // $jobs = new Job();
-        // $jobs = $jobs->where('title','like', '%' . $request->session()->get('search'). '%')
-        //              ->orderBy($request->get('field'), $request->session()->get('sort'))
-        //               ->paginate(5);
-        //  if($request->ajax()){
-        //     return view('jobs.index', compact('jobs'));
-        //  }else{
-        //     return view('jobs.ajax', compact('jobs'));
-        // }
-                
-       
-                        $jobs = Job::all();
+        $jobs = Job::all();
         return view('jobs.index', compact('jobs'));
     }
 
@@ -89,10 +66,20 @@ class JobsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // public function edit($id)
+    // {
+    //     $data = Data::find ( $req->id );
+    //     $data->name = $req->name;
+    //     $data->save ();
+    //     return response ()->json ( $data );
+    // }
     public function edit($id)
     {
-        //
+        //edit the refugee table
+        $jobs = Job::find($id);
+        return view('jobs.edit',compact('jobs'));
     }
+    
 
     /**
      * Update the specified resource in storage.
@@ -101,15 +88,19 @@ class JobsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // public function update(Request $request, $id)
+    // {
+
+    //     $job = Job::findOrFail($request->job_id);
+
+    //      $job->update($request->all());
+    //     return back(); 
+    // }
     public function update(Request $request, $id)
     {
-
-     //Job::find($id)->update($request->all());
-
-        $job = Job::findOrFail($request->job_id);
-
-         $job->update($request->all());
-        return back(); 
+    
+        Job::find($id)->update($request->all());
+        return redirect()->route('jobs.index')->with('success','Job description succcessfully updated');
     }
 
     /**

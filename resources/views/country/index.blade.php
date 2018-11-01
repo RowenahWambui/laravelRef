@@ -23,7 +23,9 @@
                             <td>{{$value->Country_Name}}</td>
                             <td>{{$value->Embassy}}</td>
                             <td>
-                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-country">Edit</button>
+                                <button class="btn btn-info" data-country_id="{{$value->id}}"data-Country_Name="{{$value->Country_Name}}" data-Embassy="{{$value->Embassy}}" data-toggle="modal" data-target="#edit-country">
+                                    <span class="glyphicon glyphicon-edit"></span> Edit
+                                </button>                               
                                 <button class="btn btn-danger"data-toggle="modal" data-target="#modal-danger">Delete</button> 
                             </td>
                         </tr>

@@ -31,7 +31,6 @@
                         <td>{{$value->Skill_Description}}</td>
                         <td>
                             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#edit-country">Edit</button>
-                            <button class="btn btn-danger"data-toggle="modal" data-target="#modal-danger">Delete</button> 
                         </td>
                     </tr>
                     @endforeach      
@@ -63,6 +62,7 @@
             </div>
         </div>
         {{-- End of Modal--}}
+        
              
 @endsection()
         

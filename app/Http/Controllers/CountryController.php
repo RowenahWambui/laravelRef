@@ -65,7 +65,7 @@ class CountryController extends Controller
      */
     public function edit($id)
     {
-
+        $country = Country::find($id);
     }
 
     /**
@@ -77,10 +77,6 @@ class CountryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
-            'Country_Name'=>'required',
-            'Embassy'=>'required',
-            ]);
             Country::find($id)->update($request->all());
             return redirect()->route('country.index')->with('success',' Details successfully added');
     }

@@ -270,13 +270,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>         
     <script src="{{ asset('js/app.js') }}"></script>   
     <script>
-        $('#edit-modal').on('show.bs.modal', function (event){
+
+        $('#editModal').on('show.bs.modal', function (event){
 
             var button = $(event.relatedTarget)
-            var title = button.data('mytitle')
-            var description = button.data('mydescription')
-            var qualifications = button.data('myqualifications')
-            var id = button.data('myid')
+            var title = button.data('name')
+            var description = button.data('description')
+            var qualifications = button.data('qualifications')
+            var id = button.data('id')
             var modal = $(this)
 
             modal.find('.modal-body #title').val(title);
@@ -299,10 +300,22 @@
         modal.find('.modal-body #id').val(id);
 
 
-    })
+    }) 
+
+      $('#edit-country').on('show.bs.modal', function (event){
+
+          var button = $(event.relatedTarget)
+          var Country_Name = button.data('Country_Name')
+          var Embassy = button.data('Embassy')
+          var id = button.data('country_id')
+          var modal = $(this)
+
+          modal.find('.modal-body #Country_Name').val(Country_Name);
+          modal.find('.modal-body #Embassy').val(Embassy);
+          modal.find('.modal-body #id').val(id);
 
 
-   
+          })
 
     </script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

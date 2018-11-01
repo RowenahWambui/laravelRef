@@ -84,16 +84,7 @@ class RefugeesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        $this->validate($request,[
-        'Full_Name'=>'required',
-        'Country'=>'required',
-        'Age'=>'required',
-        'Gender'=>'required',
-        'EducationLevel'=>'required',
-        'Skill' => 'required',
-        ]);
-
+    
         Refugees::find($id)->update($request->all());
         return redirect()->route('refugees.index')->with('success','Refugee succcessfully updated');
     }

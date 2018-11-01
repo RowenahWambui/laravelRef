@@ -20,14 +20,10 @@
             <table class="table table-bordered table-responsive">
                 <thead>    
                     <tr>
-                {{-- <th>No</th> --}}
                         <th>Job Title</th>
-                        {{-- {{request()->session()->get('field' =='title' ?(request()->session()->get('sort')== 'asc'?'&#9652;':'&#9652'):'')}} --}}
                         <th>Job Description</th>
-                        {{-- {{request()->session()->get('field' =='description' ?(request()->session()->get('sort')== 'asc'?'&#9652;':'&#9652'):'')}} --}}
                         <th>Job Qualifications</th>
                         {{-- {{request()->session()->get('field' =='qualifications' ?(request()->session()->get('sort')== 'asc'?'&#9652;':'&#9652'):'')}} --}}
-
                         <th>Modify</th>
                     </tr>
                 </thead>
@@ -38,7 +34,9 @@
                         <td>{{$value->description}}</td>
                         <td>{{$value->qualifications}}</td>
                         <td>
-                            <button type="button" class="btn btn-info" data-mytitle="{{$value->title}}" data-mydescription="{{$value->description}}" data-myqualifications="{{$value->qualifications}}" data-myid="{{$value->id}}" data-toggle="modal" data-target="#edit-modal">Edit</button>
+                            <button class="btn btn-info" data-id="{{$value->id}}"data-name="{{$value->title}}" data-description="{{$value->description}}" data-qualifications="{{$value->qualifications}}" data-toggle="modal" data-target="#editModal">
+                                <span class="glyphicon glyphicon-edit"></span> Edit
+                            </button>
                             <button class="btn btn-danger"data-toggle="modal" data-target="#modal-danger"  data-myid="{{$value->id}}">Delete</button>
                         </td>
                     </tr>
@@ -49,8 +47,6 @@
     </div>
 </div>
 
-    {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"> Add Job</button> --}}
-    
         <!--Modal -->
         <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog">
@@ -60,25 +56,26 @@
                 <span aria-hidden="true">&times;</span></button>
               <h4 class="modal-title">New Job</h4>
             </div>
-            <form action="{{route('jobs.store')}}" method="POST">
+            {!! Form::open(['route'=>'jobs.store','method'=>'POST']) !!}
+
                 <!--this csrf helps to remove laravel errors incase you click save
                  without any data or if there are no methods to save the data in the db
                  -->
-                {{csrf_field()}}
+                {{-- {{csrf_field()}} --}}
                 <div class="modal-body">
                    @include('jobs.form')
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Save</button>
                 </div>
-            <form>
-          </div>
+                {!! form::close() !!}
+            </div>
         </div>
       </div>
 
 
       <!--Edit Details Modal  -->
-      <div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -86,23 +83,26 @@
                     <span aria-hidden="true">&times;</span></button>
                   <h4 class="modal-title">Edit Job Details</h4>
                 </div>
-                <form method="POST" action="{{route('jobs.update', $value->id)}}" >
+                {!! Form::model($jobs,['route'=>['jobs.update',$value->id],'method'=>'PATCH']) !!}
+
                         <input type="hidden" name="_method" value="patch">
 
                         <!--this csrf helps to remove laravel errors incase you click save
                      without any data or if there are no methods to save the data in the db
                      -->
-                    {{csrf_field()}}
+                    {{-- {{csrf_field()}} --}}
                  {{-- this patch method isnt working. It throws an error(MethodNotAllowedHttpException ) --}}
                   {{-- {!! method_field('patch') !!} --}}
                     <div class="modal-body">
-                        <input class="hidden" name="job_id" id="id" value="{{$value->id}} ">
+                        {{-- <input class="hidden" name="job_id" id="id" value="{{$value->id}} "> --}}
                         @include('jobs.form')
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save</button>
                     </div>
-                </form>
+                    {!! form::close() !!}
+
+                {{-- </form> --}}
               </div>
             </div>
           </div>
@@ -117,9 +117,8 @@
                         <span aria-hidden="true">&times;</span></button>
                       <h4 class="modal-title">Delete Info</h4>
                     </div>
-                    <form action="{{route('jobs.destroy',$value->id)}}" method="POST">
-                            {{method_field('delete')}}
-                            {{csrf_field()}}
+
+                    {!! Form::open(['method' => 'DELETE','route' => ['jobs.destroy',$value->id],'style'=>'display'])!!}
                         <div class="modal-body">
                             <p>Are you sure you want to delete this?&hellip;</p>
                             <input class="hidden" name="job_id" id="id" value="{{$value->id}} ">
@@ -128,7 +127,7 @@
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                             <button type="submit" class="btn btn-warning">Delete</button>
                         </div>
-                    </form>
+                        {!! Form::close()!!}
                   </div>
                   <!-- /.modal-content -->
                 </div>
